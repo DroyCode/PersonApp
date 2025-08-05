@@ -15,3 +15,12 @@ function showPerson() {
     document.getElementById('persons').innerHTML = texto;
 
 }
+
+function addPerson() {
+    const form = document.forms['form'];
+    const name = form['name'];
+    const lastName = form['lastName'];
+    const person = new Person(name.value, lastName.value);
+    persons.push(person);
+    showPerson();
+}
